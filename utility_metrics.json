@@ -1,0 +1,14 @@
+{
+  "total_utility": -88.33333333333333,
+  "preference_score": 10.0,
+  "student_conflicts": 59,
+  "faculty_load_imbalance": 0.0,
+  "room_utilization": 13.333333333333334,
+  "workload_distribution": {
+    "Prof8": 4,
+    "Prof6": 4,
+    "Prof7": 4,
+    "Prof5": 4,
+    "Prof4": 4
+  }
+}
