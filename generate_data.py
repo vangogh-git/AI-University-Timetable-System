@@ -3,10 +3,6 @@ import os
 import random
 from datetime import datetime, timedelta
 
-# ==========================================
-# CONFIGURATION (You Can Change Scale Here)
-# ==========================================
-
 NUM_FACULTY = 8
 NUM_ROOMS = 10
 NUM_COURSES = 20
@@ -19,16 +15,10 @@ COURSE_MAX_ENROLLMENT = 60
 MAX_FACULTY_LOAD = 4
 NUM_TIME_SLOTS = 15
 
-# ==========================================
-# CREATE DATA FOLDER
-# ==========================================
+
 
 if not os.path.exists("data"):
     os.makedirs("data")
-
-# ==========================================
-# 1️⃣ Generate Faculty
-# ==========================================
 
 faculty_data = {
     "faculty_id": [f"Prof{i}" for i in range(1, NUM_FACULTY + 1)],
@@ -47,9 +37,7 @@ print("✅ Faculty generated:")
 print(faculty_df)
 print()
 
-# ==========================================
-# 2️⃣ Generate Rooms
-# ==========================================
+
 
 room_features = ["Projector", "AC", "Lab", "SmartBoard", "WiFi"]
 
@@ -70,9 +58,7 @@ print("✅ Rooms generated:")
 print(rooms_df)
 print()
 
-# ==========================================
-# 3️⃣ Generate Courses
-# ==========================================
+
 
 course_ids = [f"C{i:03}" for i in range(1, NUM_COURSES + 1)]
 mandatory_courses = random.sample(course_ids, max(1, NUM_COURSES // 3))
@@ -97,9 +83,7 @@ print(courses_df.head())
 print(f"Total: {len(courses_df)} courses")
 print()
 
-# ==========================================
-# 4️⃣ Generate Time Slots
-# ==========================================
+
 
 days = ["Mon", "Tue", "Wed", "Thu", "Fri"] * (NUM_TIME_SLOTS // 5 + 1)
 times = [f"{9 + (i % 3)}:00" for i in range(NUM_TIME_SLOTS)]
@@ -119,9 +103,7 @@ print("✅ Time Slots generated:")
 print(time_slots_df)
 print()
 
-# ==========================================
-# 5️⃣ Generate Students
-# ==========================================
+
 
 day_scholar_hosteller = ["Day Scholar", "Hosteller"]
 time_preferences = ["Morning", "Afternoon", "Evening"]
@@ -153,9 +135,7 @@ print(students_df.head())
 print(f"Total: {len(students_df)} students")
 print()
 
-# ==========================================
-# 6️⃣ Summary Statistics
-# ==========================================
+
 
 print("\n" + "=" * 50)
 print("📊 DATA GENERATION SUMMARY")
